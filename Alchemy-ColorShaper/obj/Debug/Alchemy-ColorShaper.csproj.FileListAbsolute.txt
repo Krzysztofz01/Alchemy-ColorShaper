@@ -1,0 +1,10 @@
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Debug\Alchemy-ColorShaper.exe.config
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Debug\Alchemy-ColorShaper.exe
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Debug\Alchemy-ColorShaper.pdb
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.csprojAssemblyReference.cache
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy_ColorShaper.Properties.Resources.resources
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.csproj.GenerateResource.cache
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.csproj.CoreCompileInputs.cache
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.exe
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.pdb
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy_ColorShaper.Form1.resources

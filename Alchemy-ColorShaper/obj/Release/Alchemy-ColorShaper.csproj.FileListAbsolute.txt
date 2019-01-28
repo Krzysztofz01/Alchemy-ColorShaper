@@ -1,0 +1,9 @@
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Release\Alchemy-ColorShaper.exe.config
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Release\Alchemy-ColorShaper.exe
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Release\Alchemy-ColorShaper.pdb
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy_ColorShaper.Form1.resources
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy_ColorShaper.Properties.Resources.resources
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csproj.GenerateResource.cache
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csproj.CoreCompileInputs.cache
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.exe
+C:\Users\Krzysztof\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.pdb
