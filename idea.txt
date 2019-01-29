@@ -1,0 +1,1 @@
+podczas pierwzego sprawdzanie przesnoszenie kolorów do bufferColor
