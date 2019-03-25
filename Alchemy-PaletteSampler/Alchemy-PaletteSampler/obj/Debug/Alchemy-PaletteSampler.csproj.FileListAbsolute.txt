@@ -1,0 +1,10 @@
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\bin\Debug\Alchemy-PaletteSampler.exe.config
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\bin\Debug\Alchemy-PaletteSampler.exe
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\bin\Debug\Alchemy-PaletteSampler.pdb
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\obj\Debug\Alchemy-PaletteSampler.csprojAssemblyReference.cache
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\obj\Debug\Alchemy_PaletteSampler.Form1.resources
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\obj\Debug\Alchemy_PaletteSampler.Properties.Resources.resources
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\obj\Debug\Alchemy-PaletteSampler.csproj.GenerateResource.cache
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\obj\Debug\Alchemy-PaletteSampler.csproj.CoreCompileInputs.cache
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\obj\Debug\Alchemy-PaletteSampler.exe
+D:\Projekty\C#\Alchemy-PaletteSampler\Alchemy-PaletteSampler\obj\Debug\Alchemy-PaletteSampler.pdb
