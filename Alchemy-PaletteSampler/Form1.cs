@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Alchemy_PaletteSampler
 {
     public partial class Form1 : Form
     {
+        private string[] outputColors = new string[4];
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +16,15 @@ namespace Alchemy_PaletteSampler
 
         private void button1_Click(object sender, EventArgs e)
         {
-            analyze();
+            if (pictureBox.Image != null)
+            {
+                progressBar.Visible = true;
+
+                if (progressBar.Visible)
+                {
+                    analyze();
+                }
+            }
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -38,7 +43,6 @@ namespace Alchemy_PaletteSampler
             bool control;
             // false = nie ma jeszcze tego koloru w liscie
             // true = ten kolor juz jest w liscie
-
 
             Bitmap map = new Bitmap(pictureBox.Image);
 
@@ -72,12 +76,37 @@ namespace Alchemy_PaletteSampler
 
             Sort.colorBubbleSort(colorTab);
 
-            for(int i=colorTab.Count - 1; i>colorTab.Count - 4; i--)
+            //Możliwe ze to nie działa przez to
+            for(int i=colorTab.Count - 1, j=0; i>colorTab.Count - 5; i--, j++)
             {
                 Console.Out.WriteLine(colorTab[i].printColor());
                 Console.Out.WriteLine(colorTab[i].getAmount());
                 Console.Out.WriteLine("===========================");
+
+                outputColors[j] = colorTab[i].printColor();  
             }
+
+            paintPanels();
+        }
+
+        private void paintPanels()
+        {
+            progressBar.Visible = false;
+
+            colorPanel1.Visible = true;
+            colorPanel2.Visible = true;
+            colorPanel3.Visible = true;
+            colorPanel4.Visible = true;
+
+            colorPanel1.BackColor = ColorTranslator.FromHtml(outputColors[0]);
+            colorPanel2.BackColor = ColorTranslator.FromHtml(outputColors[1]);
+            colorPanel3.BackColor = ColorTranslator.FromHtml(outputColors[2]);
+            colorPanel4.BackColor = ColorTranslator.FromHtml(outputColors[3]);
+
+            colorText1.Text = outputColors[0];
+            colorText2.Text = outputColors[1];
+            colorText3.Text = outputColors[2];
+            colorText4.Text = outputColors[3];
         }
     }
 }
