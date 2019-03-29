@@ -29,6 +29,7 @@ namespace Alchemy_PaletteSampler
             }
         }
 
-        
+        //https://www.w3resource.com/csharp-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-7.php
+
     }
 }
