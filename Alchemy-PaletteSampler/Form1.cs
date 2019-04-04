@@ -23,8 +23,10 @@ namespace Alchemy_PaletteSampler
                 List<Tint> colorTab = new List<Tint>();
                 Bitmap map = new Bitmap(pictureBox.Image);
 
-                Alchemy.analyze(map, colorTab, outputColors);
+                Alchemy.analyze(Pixelate.convert(map, new Rectangle(0, 0, map.Width, map.Height), 50), colorTab, outputColors);
 
+                // Metoda pikselizacji 
+                //pictureBox.Image = Pixelate.convert(map, new Rectangle(0, 0, map.Width, map.Height), 50);
 
                 paintPanels();
 
