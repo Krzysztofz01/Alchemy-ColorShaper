@@ -39,12 +39,39 @@ namespace Alchemy_PaletteSampler
                 }
             }
             Sort.colorBubbleSort(inputTab);
-            
 
+            /*
             for (int o = inputTab.Count - 1, p = 0; o > inputTab.Count - 5; o--, p++)
             {
                 outputTab[p] = inputTab[o].printColor();
             }
+            */
+
+            Filter colorFilter = new Filter(50);
+            outputTab[0] = inputTab[inputTab.Count].printColor();
+            int currentCheck = inputTab.Count - 1;
+            bool isGood = true;
+            int outputTabIndex = 1;
+            while(outputTab.Length < 4)
+            {
+                isGood = true;
+                for(int i=0; i< outputTab.Length; i++)
+                {
+                    if (colorFilter.different(hextoColor(outputTab[i]), hextoColor(inputTab[currentCheck].printColor())))
+                    {
+                        isGood = false; 
+                    }
+                }
+
+                if(isGood)
+                {
+                    outputTab[outputTabIndex] = inputTab[currentCheck].printColor();
+                    outputTabIndex++;
+                }
+
+                currentCheck--;
+            }
+
         }
 
 
@@ -52,6 +79,11 @@ namespace Alchemy_PaletteSampler
         {
             string hex = a.R.ToString("X2") + a.G.ToString("X2") + a.B.ToString("X2");
             return "#" + hex;
+        }
+
+        private static Color hextoColor(string input)
+        {
+            return ColorTranslator.FromHtml(input);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Alchemy_PaletteSampler
     {
         int threshold;
 
-        Filter(int inputThreshold)
+        public Filter(int inputThreshold)
         {
             threshold = inputThreshold;
         }
