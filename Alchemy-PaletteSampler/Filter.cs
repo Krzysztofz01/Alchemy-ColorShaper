@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace Alchemy_PaletteSampler
@@ -24,9 +20,9 @@ namespace Alchemy_PaletteSampler
 
             if(distanceR + distanceG + distanceB > this.threshold)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
     }
 }

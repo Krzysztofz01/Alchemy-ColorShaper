@@ -21,7 +21,7 @@ namespace Alchemy_PaletteSampler
             {
                 for(int j=0; j < tab.Count - i - 1; j++)
                 {
-                    if(tab[j].getAmount() > tab[j+1].getAmount())
+                    if(tab[j].getAmount() < tab[j+1].getAmount())
                     {
                         Swap(tab, j, j + 1);
                     }

@@ -47,8 +47,9 @@ namespace Alchemy_PaletteSampler
             }
             */
 
+            /*
             Filter colorFilter = new Filter(50);
-            outputTab[0] = inputTab[inputTab.Count].printColor();
+            outputTab[0] = inputTab[inputTab.Count-1].printColor();
             int currentCheck = inputTab.Count - 1;
             bool isGood = true;
             int outputTabIndex = 1;
@@ -70,7 +71,44 @@ namespace Alchemy_PaletteSampler
                 }
 
                 currentCheck--;
+            }*/
+            
+
+            //Remember to resize!!!
+
+
+
+            Filter filter = new Filter(200); //Tworzymy nowy filtr z threshold 50!
+            int currentCheck = 1;
+            int outputTabIndex = 1;
+            bool isGood = true;
+
+            outputTab[0] = inputTab[0].printColor();
+
+            while(outputTabIndex < 4)
+            {
+                isGood = true;
+                for(int j=0; j<outputTab.Length; j++)
+                {
+                    if(filter.different(hextoColor(outputTab[j]), hextoColor(inputTab[currentCheck].printColor())))
+                    {
+                        isGood = false;
+                    }
+                }
+
+                if(isGood)
+                {
+                    outputTab[outputTabIndex] = inputTab[currentCheck].printColor();
+
+                    outputTabIndex++;
+                    currentCheck++;
+                }
+                else
+                {
+                    currentCheck++;
+                }
             }
+
 
         }
 
