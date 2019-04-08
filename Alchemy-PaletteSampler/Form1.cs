@@ -7,7 +7,8 @@ namespace Alchemy_PaletteSampler
 {
     public partial class Form1 : Form
     {
-        private string[] outputColors = new string[4];
+        //private string[] outputColors = new string[4];
+        private List<string> outputColors = new List<string>();
 
         public Form1()
         {
@@ -21,7 +22,7 @@ namespace Alchemy_PaletteSampler
                 progressBar.Visible = true;
 
                 List<Tint> colorTab = new List<Tint>();
-                Bitmap map = new Bitmap(pictureBox.Image);
+                Bitmap map = new Bitmap(pictureBox.Image, 600, 600);
 
                 Alchemy.analyze(Pixelate.convert(map, new Rectangle(0, 0, map.Width, map.Height), 50), colorTab, outputColors);
 

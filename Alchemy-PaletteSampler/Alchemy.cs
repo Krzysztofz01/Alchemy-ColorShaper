@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace Alchemy_PaletteSampler
 {
     class Alchemy
     {
-        public static void analyze(Bitmap map, List<Tint> inputTab, string[] outputTab)
+        public static void analyze(Bitmap map, List<Tint> inputTab, List<string> outputTab)
         {
             bool control;
             // false = nie ma jeszcze tego koloru w liscie
@@ -72,12 +73,12 @@ namespace Alchemy_PaletteSampler
 
                 currentCheck--;
             }*/
-            
+
 
             //Remember to resize!!!
 
 
-
+            /*
             Filter filter = new Filter(200); //Tworzymy nowy filtr z threshold 50!
             int currentCheck = 1;
             int outputTabIndex = 1;
@@ -85,10 +86,10 @@ namespace Alchemy_PaletteSampler
 
             outputTab[0] = inputTab[0].printColor();
 
-            while(outputTabIndex < 4)
+            while(outputTabIndex < 3)
             {
                 isGood = true;
-                for(int j=0; j<outputTab.Length; j++)
+                for(int j=0; j<outputTab.Length; j++) //zamiast length dalem 4
                 {
                     if(filter.different(hextoColor(outputTab[j]), hextoColor(inputTab[currentCheck].printColor())))
                     {
@@ -108,8 +109,42 @@ namespace Alchemy_PaletteSampler
                     currentCheck++;
                 }
             }
+            */
 
+            Filter filter = new Filter(50); //Tutaj ustalamy próg zadziałania! 50 to dobry starting point
+            int inputTabIndex =  inputTab.Count -2;
+            bool isGood;
 
+            outputTab.Add(inputTab[inputTab.Count -1].printColor());
+            while(outputTab.Count < 4)
+            {
+                isGood = true;
+
+                for(int y=0; y<outputTab.Count; y++)
+                {
+                    if (filter.different(hextoColor(outputTab[y]), hextoColor(inputTab[inputTabIndex].printColor())))
+                        isGood = false;
+                }
+
+                if(isGood)
+                {
+                    outputTab.Add(inputTab[inputTabIndex].printColor());
+                    inputTabIndex--;
+                }
+                else
+                {
+                    inputTabIndex--;
+                }
+            }
+    
+
+            
+
+            /// DEBUG ///
+            for(int m=0; m<outputTab.Count; m++)
+            {
+                Console.Out.WriteLine(outputTab[m]);
+            }
         }
 
 
