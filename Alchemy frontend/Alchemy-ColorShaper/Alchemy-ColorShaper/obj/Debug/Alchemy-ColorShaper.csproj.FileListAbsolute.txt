@@ -18,3 +18,4 @@ C:\Users\Krzysztof\Desktop\notututu\Alchemy-ColorShaper\Alchemy frontend\Alchemy
 C:\Users\Krzysztof\Desktop\notututu\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.csproj.CoreCompileInputs.cache
 C:\Users\Krzysztof\Desktop\notututu\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.exe
 C:\Users\Krzysztof\Desktop\notututu\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy-ColorShaper.pdb
+C:\Users\Krzysztof\Desktop\notututu\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Debug\Alchemy_ColorShaper.outputWindow.resources

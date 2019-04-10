@@ -67,7 +67,7 @@
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnMin.ForeColor = System.Drawing.Color.White;
-            this.btnMin.Location = new System.Drawing.Point(665, 0);
+            this.btnMin.Location = new System.Drawing.Point(665, 2);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(18, 21);
             this.btnMin.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Montserrat", 11.25F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(689, 0);
+            this.btnClose.Location = new System.Drawing.Point(689, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(20, 21);
             this.btnClose.TabIndex = 2;
@@ -91,7 +91,7 @@
             this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.titleLabel.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(269, 0);
+            this.titleLabel.Location = new System.Drawing.Point(269, 2);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(174, 21);
             this.titleLabel.TabIndex = 2;
