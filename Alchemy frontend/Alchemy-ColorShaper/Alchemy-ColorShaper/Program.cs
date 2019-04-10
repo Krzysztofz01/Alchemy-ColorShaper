@@ -16,7 +16,7 @@ namespace Alchemy_ColorShaper
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new outputWindow());
+            Application.Run(new mainWindow());
         }
     }
 }
