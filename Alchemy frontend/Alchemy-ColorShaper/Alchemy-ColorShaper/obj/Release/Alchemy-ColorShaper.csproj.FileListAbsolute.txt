@@ -20,3 +20,5 @@ D:\Projekty\C#\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-
 D:\Projekty\C#\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csproj.CoreCompileInputs.cache
 D:\Projekty\C#\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.exe
 D:\Projekty\C#\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.pdb
+C:\Users\Krzysztof\Desktop\notututu\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csprojAssemblyReference.cache
+C:\Users\Krzysztof\Desktop\notututu\Alchemy-ColorShaper\Alchemy frontend\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy_ColorShaper.Splash.resources

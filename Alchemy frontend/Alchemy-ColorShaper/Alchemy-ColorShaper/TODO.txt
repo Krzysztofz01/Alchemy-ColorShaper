@@ -5,3 +5,6 @@
 -export kolorów z zapisem hex
 -optymalizacja klasy Data
 -czyszcznie nie u¿ywanych metod
+
+-jesli nie me tyle outpotw to daj invisivble panele
+-podczas analizowania sprawdz czy sie nie wykorzysta³a tabela i te kolory ³¹duj do tempa zedby daj je potem jak sie lista skonczy (jutro nie bede wiedzial o co mi tu chodzi³o XD)

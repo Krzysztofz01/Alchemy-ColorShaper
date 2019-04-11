@@ -10,7 +10,6 @@ namespace Alchemy_ColorShaper
     public partial class mainWindow : Form
     {
         private int mov, movX, movY;
-        public string imageLocation = null;
 
         public mainWindow()
         {
@@ -68,7 +67,7 @@ namespace Alchemy_ColorShaper
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (imageLocation != null)
+            if (Data.imageLocation != "")
             {
                 Data.threshold = trackBar1.Value;
                 Data.resolution = trackBar3.Value;
