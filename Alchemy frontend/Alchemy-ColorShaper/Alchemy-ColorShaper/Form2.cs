@@ -37,6 +37,19 @@ namespace Alchemy_ColorShaper
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void outputWindow_Load(object sender, EventArgs e)
+        {
+            pictureBox.ImageLocation = Data.imageLocation;
+
+            panel1.BackColor = Alchemy.hextoColor(Data.colors[0]);
+            panel2.BackColor = Alchemy.hextoColor(Data.colors[1]);
+            panel3.BackColor = Alchemy.hextoColor(Data.colors[2]);
+            panel4.BackColor = Alchemy.hextoColor(Data.colors[3]);
+            panel5.BackColor = Alchemy.hextoColor(Data.colors[4]);
+            panel6.BackColor = Alchemy.hextoColor(Data.colors[5]);
+            panel7.BackColor = Alchemy.hextoColor(Data.colors[6]);
+        }
+
         private void topBar_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Alchemy_PaletteSampler;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Alchemy_ColorShaper
@@ -15,7 +18,9 @@ namespace Alchemy_ColorShaper
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            trackBarValue1.Text = trackBar1.Value.ToString();
+            trackBarValue2.Text = trackBar3.Value.ToString();
+            trackBarValue3.Text = trackBar2.Value.ToString();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -45,12 +50,52 @@ namespace Alchemy_ColorShaper
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
 
-            if(ofd.ShowDialog() == DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                Input.imageLocation = ofd.FileName;
+                Data.imageLocation = ofd.FileName;
                 selectedPic.Text = ofd.FileName;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Data.threshold = trackBar1.Value;
+            Data.resolution = trackBar3.Value;
+            Data.compression = trackBar2.Value;
+
+            // Rozpoczecie procesu
+            List<string> outputColors = new List<string>();
+            Bitmap holder = new Bitmap(Data.imageLocation);
+            Bitmap map = new Bitmap(holder, Data.resolution, Data.resolution); //Tutaj bede jedne z paramatrow
+            Alchemy.analyze(Pixelate.convert(map, new Rectangle(0, 0, map.Width, map.Height), 50), outputColors);
+
+            for(int i=0; i<7; i++)
+            {
+                Data.colors[i] = outputColors[i];
+            }
+
+            this.Hide();
+            outputWindow outputWin = new outputWindow();
+            outputWin.ShowDialog();
+            this.Close(); // This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues. ﻿
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            trackBarValue1.Text = trackBar1.Value.ToString();
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            trackBarValue2.Text = trackBar3.Value.ToString();
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            trackBarValue3.Text = trackBar2.Value.ToString();
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
