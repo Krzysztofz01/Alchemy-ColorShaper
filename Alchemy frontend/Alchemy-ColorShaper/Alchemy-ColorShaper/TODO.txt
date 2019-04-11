@@ -1,5 +1,5 @@
--spradzanie czy wybrales plik
--splash screen
+							-spradzanie czy wybrales plik
+							-splash screen
 -asynchoriniczny progress bar
 -zapisywanie obrazu
 -export kolorów z zapisem hex

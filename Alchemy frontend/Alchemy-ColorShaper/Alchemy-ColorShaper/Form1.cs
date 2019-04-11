@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Alchemy_ColorShaper
@@ -13,8 +14,14 @@ namespace Alchemy_ColorShaper
 
         public mainWindow()
         {
+            Thread t = new Thread(new ThreadStart(SplashScreen));
+            t.Start();
+            Thread.Sleep(2000);
             InitializeComponent();
+            t.Abort();
         }
+
+        private void SplashScreen() => Application.Run(new Splash());
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -61,26 +68,28 @@ namespace Alchemy_ColorShaper
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Data.threshold = trackBar1.Value;
-            Data.resolution = trackBar3.Value;
-            Data.compression = trackBar2.Value;
-
-            // Rozpoczecie procesu
-            List<string> outputColors = new List<string>();
-            Bitmap holder = new Bitmap(Data.imageLocation);
-            Bitmap map = new Bitmap(holder, Data.resolution, Data.resolution); //Tutaj bede jedne z paramatrow
-            Alchemy.analyze(Pixelate.convert(map, new Rectangle(0, 0, map.Width, map.Height), 50), outputColors);
-
-            for(int i=0; i<7; i++)
+            if (imageLocation != null)
             {
-                Data.colors[i] = outputColors[i];
+                Data.threshold = trackBar1.Value;
+                Data.resolution = trackBar3.Value;
+                Data.compression = trackBar2.Value;
+
+                // Rozpoczecie procesu
+                List<string> outputColors = new List<string>();
+                Bitmap holder = new Bitmap(Data.imageLocation);
+                Bitmap map = new Bitmap(holder, Data.resolution, Data.resolution); //Tutaj bede jedne z paramatrow
+                Alchemy.analyze(Pixelate.convert(map, new Rectangle(0, 0, map.Width, map.Height), 50), outputColors);
+
+                for (int i = 0; i < 7; i++)
+                {
+                    Data.colors[i] = outputColors[i];
+                }
+
+                this.Hide();
+                outputWindow outputWin = new outputWindow();
+                outputWin.ShowDialog();
+                this.Close(); // This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues. ﻿
             }
-
-            this.Hide();
-            outputWindow outputWin = new outputWindow();
-            outputWin.ShowDialog();
-            this.Close(); // This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues. ﻿
-
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)

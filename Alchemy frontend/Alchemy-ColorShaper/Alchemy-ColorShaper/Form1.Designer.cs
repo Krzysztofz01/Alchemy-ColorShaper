@@ -57,8 +57,9 @@
             this.topBar.Controls.Add(this.btnClose);
             this.topBar.Controls.Add(this.titleLabel);
             this.topBar.Location = new System.Drawing.Point(0, 0);
+            this.topBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.topBar.Name = "topBar";
-            this.topBar.Size = new System.Drawing.Size(712, 25);
+            this.topBar.Size = new System.Drawing.Size(949, 31);
             this.topBar.TabIndex = 1;
             this.topBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.topBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -70,9 +71,10 @@
             this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnMin.ForeColor = System.Drawing.Color.White;
-            this.btnMin.Location = new System.Drawing.Point(665, 2);
+            this.btnMin.Location = new System.Drawing.Point(887, 2);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(16, 18);
+            this.btnMin.Size = new System.Drawing.Size(20, 24);
             this.btnMin.TabIndex = 2;
             this.btnMin.Text = "_";
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
@@ -83,9 +85,10 @@
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(689, 2);
+            this.btnClose.Location = new System.Drawing.Point(919, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(18, 18);
+            this.btnClose.Size = new System.Drawing.Size(24, 24);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "X";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -96,9 +99,10 @@
             this.titleLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
-            this.titleLabel.Location = new System.Drawing.Point(280, 2);
+            this.titleLabel.Location = new System.Drawing.Point(373, 2);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(153, 18);
+            this.titleLabel.Size = new System.Drawing.Size(196, 24);
             this.titleLabel.TabIndex = 2;
             this.titleLabel.Text = "Alchemy-ColorShaper";
             // 
@@ -106,9 +110,10 @@
             // 
             this.selectedPic.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.selectedPic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.selectedPic.Location = new System.Drawing.Point(192, 64);
+            this.selectedPic.Location = new System.Drawing.Point(256, 79);
+            this.selectedPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.selectedPic.Name = "selectedPic";
-            this.selectedPic.Size = new System.Drawing.Size(251, 13);
+            this.selectedPic.Size = new System.Drawing.Size(335, 15);
             this.selectedPic.TabIndex = 2;
             // 
             // button1
@@ -117,9 +122,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button1.Location = new System.Drawing.Point(449, 60);
+            this.button1.Location = new System.Drawing.Point(599, 74);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 20);
+            this.button1.Size = new System.Drawing.Size(52, 25);
             this.button1.TabIndex = 3;
             this.button1.Text = ". . .";
             this.button1.UseVisualStyleBackColor = false;
@@ -127,10 +133,11 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(59, 140);
+            this.trackBar1.Location = new System.Drawing.Point(79, 172);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(194, 45);
+            this.trackBar1.Size = new System.Drawing.Size(259, 56);
             this.trackBar1.TabIndex = 4;
             this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar1.Value = 50;
@@ -138,11 +145,12 @@
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(459, 140);
+            this.trackBar2.Location = new System.Drawing.Point(612, 172);
+            this.trackBar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trackBar2.Maximum = 100;
             this.trackBar2.Minimum = 2;
             this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(194, 45);
+            this.trackBar2.Size = new System.Drawing.Size(259, 56);
             this.trackBar2.TabIndex = 5;
             this.trackBar2.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar2.Value = 50;
@@ -150,11 +158,12 @@
             // 
             // trackBar3
             // 
-            this.trackBar3.Location = new System.Drawing.Point(259, 140);
+            this.trackBar3.Location = new System.Drawing.Point(345, 172);
+            this.trackBar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trackBar3.Maximum = 1000;
             this.trackBar3.Minimum = 200;
             this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(194, 45);
+            this.trackBar3.Size = new System.Drawing.Size(259, 56);
             this.trackBar3.TabIndex = 6;
             this.trackBar3.TickStyle = System.Windows.Forms.TickStyle.None;
             this.trackBar3.Value = 600;
@@ -165,9 +174,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(122, 124);
+            this.label1.Location = new System.Drawing.Point(163, 153);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Threshold";
             // 
@@ -176,9 +186,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label2.Location = new System.Drawing.Point(320, 124);
+            this.label2.Location = new System.Drawing.Point(427, 153);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Resolution";
             // 
@@ -187,9 +198,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label3.Location = new System.Drawing.Point(512, 124);
+            this.label3.Location = new System.Drawing.Point(683, 153);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "Compression";
             // 
@@ -198,9 +210,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.button2.Location = new System.Drawing.Point(259, 225);
+            this.button2.Location = new System.Drawing.Point(345, 277);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(194, 33);
+            this.button2.Size = new System.Drawing.Size(259, 41);
             this.button2.TabIndex = 10;
             this.button2.Text = "Start!";
             this.button2.UseVisualStyleBackColor = true;
@@ -211,9 +224,10 @@
             this.trackBarValue1.AutoSize = true;
             this.trackBarValue1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.trackBarValue1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.trackBarValue1.Location = new System.Drawing.Point(130, 169);
+            this.trackBarValue1.Location = new System.Drawing.Point(173, 208);
+            this.trackBarValue1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.trackBarValue1.Name = "trackBarValue1";
-            this.trackBarValue1.Size = new System.Drawing.Size(53, 16);
+            this.trackBarValue1.Size = new System.Drawing.Size(63, 20);
             this.trackBarValue1.TabIndex = 11;
             this.trackBarValue1.Text = "sample";
             // 
@@ -222,9 +236,10 @@
             this.trackBarValue2.AutoSize = true;
             this.trackBarValue2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.trackBarValue2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.trackBarValue2.Location = new System.Drawing.Point(330, 169);
+            this.trackBarValue2.Location = new System.Drawing.Point(440, 208);
+            this.trackBarValue2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.trackBarValue2.Name = "trackBarValue2";
-            this.trackBarValue2.Size = new System.Drawing.Size(53, 16);
+            this.trackBarValue2.Size = new System.Drawing.Size(63, 20);
             this.trackBarValue2.TabIndex = 12;
             this.trackBarValue2.Text = "sample";
             // 
@@ -233,18 +248,19 @@
             this.trackBarValue3.AutoSize = true;
             this.trackBarValue3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.trackBarValue3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.trackBarValue3.Location = new System.Drawing.Point(530, 169);
+            this.trackBarValue3.Location = new System.Drawing.Point(707, 208);
+            this.trackBarValue3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.trackBarValue3.Name = "trackBarValue3";
-            this.trackBarValue3.Size = new System.Drawing.Size(53, 16);
+            this.trackBarValue3.Size = new System.Drawing.Size(63, 20);
             this.trackBarValue3.TabIndex = 13;
             this.trackBarValue3.Text = "sample";
             // 
             // mainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(712, 304);
+            this.ClientSize = new System.Drawing.Size(949, 374);
             this.Controls.Add(this.trackBarValue3);
             this.Controls.Add(this.trackBarValue2);
             this.Controls.Add(this.trackBarValue1);
@@ -259,6 +275,7 @@
             this.Controls.Add(this.selectedPic);
             this.Controls.Add(this.topBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "mainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alchemy-ColorShaper";
