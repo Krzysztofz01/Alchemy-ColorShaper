@@ -1,0 +1,7 @@
+-spradzanie czy wybrales plik
+-splash screen
+-asynchoriniczny progress bar
+-zapisywanie obrazu
+-export kolorów z zapisem hex
+-optymalizacja klasy Data
+-czyszcznie nie u¿ywanych metod
