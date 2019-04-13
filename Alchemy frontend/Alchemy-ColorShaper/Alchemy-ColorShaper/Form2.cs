@@ -42,12 +42,19 @@ namespace Alchemy_ColorShaper
             pictureBox.ImageLocation = Data.imageLocation;
 
             panel1.BackColor = Alchemy.hextoColor(Data.colors[0]);
+            label1.Text = Data.colors[0];
             panel2.BackColor = Alchemy.hextoColor(Data.colors[1]);
+            label2.Text = Data.colors[1];
             panel3.BackColor = Alchemy.hextoColor(Data.colors[2]);
+            label3.Text = Data.colors[2];
             panel4.BackColor = Alchemy.hextoColor(Data.colors[3]);
+            label4.Text = Data.colors[3];
             panel5.BackColor = Alchemy.hextoColor(Data.colors[4]);
+            label5.Text = Data.colors[4];
             panel6.BackColor = Alchemy.hextoColor(Data.colors[5]);
+            label6.Text = Data.colors[5];
             panel7.BackColor = Alchemy.hextoColor(Data.colors[6]);
+            label7.Text = Data.colors[6];
         }
 
         private void topBar_MouseUp(object sender, MouseEventArgs e)
