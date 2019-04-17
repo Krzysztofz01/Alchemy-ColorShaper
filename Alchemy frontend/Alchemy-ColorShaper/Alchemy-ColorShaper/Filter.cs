@@ -5,7 +5,10 @@ namespace Alchemy_PaletteSampler
 {
     class Filter
     {
-        int threshold;
+        //The task of the Filter class is to filter colors with too
+        //much similarity based on the ,,threshold" value
+
+        private int threshold;
 
         public Filter(int inputThreshold)
         {

@@ -57,6 +57,41 @@ namespace Alchemy_ColorShaper
             label7.Text = Data.colors[6];
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Clipboard.SetText(Data.colors[0]);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Clipboard.SetText(Data.colors[1]);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            Clipboard.SetText(Data.colors[2]);
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            Clipboard.SetText(Data.colors[3]);
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            Clipboard.SetText(Data.colors[4]);
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+            Clipboard.SetText(Data.colors[5]);
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            Clipboard.SetText(Data.colors[6]);
+        }
+
         private void topBar_MouseUp(object sender, MouseEventArgs e)
         {
             mov = 0;

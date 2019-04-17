@@ -5,6 +5,9 @@ namespace Alchemy_PaletteSampler
 {
     class Sort
     {
+        //Sort class contains a simple bubble sort algorithm, that will by replaced with
+        //a merge sort algorithm in the future
+
         private static void Swap<T>(IList<T> list, int indexA, int indexB)
         {
             T tmp = list[indexA];

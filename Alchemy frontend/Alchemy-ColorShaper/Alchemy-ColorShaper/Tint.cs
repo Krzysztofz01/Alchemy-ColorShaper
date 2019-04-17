@@ -2,6 +2,8 @@
 {
     class Tint
     {
+        //Tint class is a simple container to hold the Hex value of a color and the amount occurrences
+
         private string color;
         private int amount;
 

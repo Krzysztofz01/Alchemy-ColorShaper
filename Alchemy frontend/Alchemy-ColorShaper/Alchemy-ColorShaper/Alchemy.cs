@@ -6,16 +6,17 @@ using System.Drawing;
 namespace Alchemy_ColorShaper
 {
     class Alchemy
-    {
-        //Klasa Alchemy zawierająca główny algorytm analizujący
+    { 
+        //Alchemy class contains default analyzing algorithm
 
         public static void analyze(Bitmap map, List<string> outputTab)
         {
             List<Tint> inputTab = new List<Tint>();
             bool control;
-            // false = nie ma jeszcze tego koloru w liscie
-            // true = ten kolor juz jest w liscie
+            // false = this color isn't on the list
+            // true = this color is already on the list
 
+            //Checking all pixels in a loop row by row
             for (int y = 0; y < map.Height; y++)
             {
                 for (int x = 0; x < map.Width; x++)
@@ -43,9 +44,12 @@ namespace Alchemy_ColorShaper
                     }
                 }
             }
+
+            //Sorting colors by number of occurences
             Sort.colorBubbleSort(inputTab);
 
-            Filter filter = new Filter(Data.threshold); //Tutaj ustalamy próg zadziałania! 50 to dobry starting point
+            //Removing colors that are too similar to each other
+            Filter filter = new Filter(Data.threshold); 
             int inputTabIndex = inputTab.Count - 2;
             bool isGood;
 
@@ -71,9 +75,6 @@ namespace Alchemy_ColorShaper
                 }
             }
 
-
-
-
             /// DEBUG ///
             for (int m = 0; m < outputTab.Count; m++)
             {
@@ -81,12 +82,14 @@ namespace Alchemy_ColorShaper
             }
         }
 
+        //Color struct to Hex string conversion method
         private static string toHex(Color a)
         {
             string hex = a.R.ToString("X2") + a.G.ToString("X2") + a.B.ToString("X2");
             return "#" + hex;
         }
 
+        //Hex string to Color struct conversion method
         public static Color hextoColor(string input)
         {
             return ColorTranslator.FromHtml(input);
