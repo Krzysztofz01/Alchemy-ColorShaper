@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Alchemy_ColorShaper
+﻿namespace Alchemy_ColorShaper
 {
     class Data
     {

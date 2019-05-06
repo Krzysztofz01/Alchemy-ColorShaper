@@ -33,10 +33,7 @@ namespace Alchemy_ColorShaper
             }
         }
 
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+        private void btnMin_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
 
         private void outputWindow_Load(object sender, EventArgs e)
         {

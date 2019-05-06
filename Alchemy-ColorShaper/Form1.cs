@@ -48,10 +48,7 @@ namespace Alchemy_ColorShaper
             }
         }
 
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+        private void btnMin_Click(object sender, EventArgs e) => this.WindowState = FormWindowState.Minimized;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -87,7 +84,7 @@ namespace Alchemy_ColorShaper
                 this.Hide();
                 outputWindow outputWin = new outputWindow();
                 outputWin.ShowDialog();
-                this.Close(); // This line stops the hidden form from running in the background, which can lead to memory leaks and performance issues. ﻿
+                this.Close(); 
             }
         }
 
