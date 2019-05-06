@@ -15,7 +15,7 @@ namespace Alchemy_ColorShaper
         {
             Thread t = new Thread(new ThreadStart(SplashScreen));
             t.Start();
-            Thread.Sleep(2000);
+            Thread.Sleep(1500);
             InitializeComponent();
             t.Abort();
         }
@@ -56,7 +56,7 @@ namespace Alchemy_ColorShaper
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+            ofd.Filter = "Image files (*.jpg, *.jpeg, *.png, *.bmp) | *.jpg; *.jpeg; *.png; *.bmp";
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {

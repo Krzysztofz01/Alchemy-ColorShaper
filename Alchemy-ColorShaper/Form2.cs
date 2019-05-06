@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Alchemy_ColorShaper
@@ -90,6 +91,21 @@ namespace Alchemy_ColorShaper
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
             Clipboard.SetText(Data.colors[6]);
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e) => Export.exportAsImage();
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+            Process.Start("Alchemy-ColorShaper.exe");
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                System.Environment.Exit(1);
+            }
         }
 
         private void topBar_MouseUp(object sender, MouseEventArgs e)

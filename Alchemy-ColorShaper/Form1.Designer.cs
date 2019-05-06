@@ -57,7 +57,7 @@
             this.topBar.Controls.Add(this.btnClose);
             this.topBar.Controls.Add(this.titleLabel);
             this.topBar.Location = new System.Drawing.Point(0, 0);
-            this.topBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.topBar.Margin = new System.Windows.Forms.Padding(4);
             this.topBar.Name = "topBar";
             this.topBar.Size = new System.Drawing.Size(949, 31);
             this.topBar.TabIndex = 1;
@@ -110,8 +110,8 @@
             // 
             this.selectedPic.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.selectedPic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.selectedPic.Location = new System.Drawing.Point(256, 79);
-            this.selectedPic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectedPic.Location = new System.Drawing.Point(256, 85);
+            this.selectedPic.Margin = new System.Windows.Forms.Padding(4);
             this.selectedPic.Name = "selectedPic";
             this.selectedPic.Size = new System.Drawing.Size(335, 15);
             this.selectedPic.TabIndex = 2;
@@ -120,21 +120,21 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.button1.Location = new System.Drawing.Point(599, 74);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 25);
+            this.button1.Size = new System.Drawing.Size(64, 36);
             this.button1.TabIndex = 3;
-            this.button1.Text = ". . .";
+            this.button1.Text = "Import";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(79, 172);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(259, 56);
@@ -146,7 +146,7 @@
             // trackBar2
             // 
             this.trackBar2.Location = new System.Drawing.Point(612, 172);
-            this.trackBar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar2.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar2.Maximum = 100;
             this.trackBar2.Minimum = 2;
             this.trackBar2.Name = "trackBar2";
@@ -159,7 +159,7 @@
             // trackBar3
             // 
             this.trackBar3.Location = new System.Drawing.Point(345, 172);
-            this.trackBar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.trackBar3.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar3.Maximum = 1000;
             this.trackBar3.Minimum = 200;
             this.trackBar3.Name = "trackBar3";
@@ -211,7 +211,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
             this.button2.Location = new System.Drawing.Point(345, 277);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(259, 41);
             this.button2.TabIndex = 10;
@@ -275,7 +275,7 @@
             this.Controls.Add(this.selectedPic);
             this.Controls.Add(this.topBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "mainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alchemy-ColorShaper";
