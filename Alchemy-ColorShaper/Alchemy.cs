@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace Alchemy_ColorShaper
 {
@@ -17,9 +18,9 @@ namespace Alchemy_ColorShaper
             // true = this color is already on the list
 
             //Checking all pixels in a loop row by row
-            for (int y = 0; y < map.Height; y++)
+            for (int y = 0; y < map.Height; y+=Data.accuracy)
             {
-                for (int x = 0; x < map.Width; x++)
+                for (int x = 0; x < map.Width; x+=Data.accuracy)
                 {
                     control = false;
                     if (inputTab.Count == 0)
@@ -47,6 +48,9 @@ namespace Alchemy_ColorShaper
 
             //Sorting colors by number of occurences
             Sort.colorBubbleSort(inputTab);
+
+            //inputTab = inputTab.OrderBy(x => x.getAmount()).ToList();
+            //Linq okazał się wolniejszy
 
             //Removing colors that are too similar to each other
             Filter filter = new Filter(Data.threshold); 

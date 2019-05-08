@@ -58,3 +58,15 @@ D:\Projekty\C#\nowyshaper\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Al
 D:\Projekty\C#\nowyshaper\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csproj.CoreCompileInputs.cache
 D:\Projekty\C#\nowyshaper\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.exe
 D:\Projekty\C#\nowyshaper\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.pdb
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Release\Alchemy-ColorShaper.exe.config
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Release\Alchemy-ColorShaper.exe
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\bin\Release\Alchemy-ColorShaper.pdb
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csprojAssemblyReference.cache
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy_ColorShaper.mainWindow.resources
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy_ColorShaper.outputWindow.resources
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy_ColorShaper.Properties.Resources.resources
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy_ColorShaper.Splash.resources
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csproj.GenerateResource.cache
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.csproj.CoreCompileInputs.cache
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.exe
+D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper\obj\Release\Alchemy-ColorShaper.pdb

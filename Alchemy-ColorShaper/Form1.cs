@@ -27,6 +27,7 @@ namespace Alchemy_ColorShaper
             trackBarValue1.Text = trackBar1.Value.ToString();
             trackBarValue2.Text = trackBar3.Value.ToString();
             trackBarValue3.Text = trackBar2.Value.ToString();
+            trackBarValue4.Text = trackBar4.Value.ToString();
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -69,6 +70,7 @@ namespace Alchemy_ColorShaper
                 Data.threshold = trackBar1.Value;
                 Data.resolution = trackBar3.Value;
                 Data.compression = trackBar2.Value;
+                Data.accuracy = trackBar4.Value;
 
                 // Rozpoczecie procesu
                 List<string> outputColors = new List<string>();
@@ -101,6 +103,11 @@ namespace Alchemy_ColorShaper
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
             trackBarValue3.Text = trackBar2.Value.ToString();
+        }
+
+        private void TrackBar4_Scroll(object sender, EventArgs e)
+        {
+            trackBarValue4.Text = trackBar4.Value.ToString();
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
