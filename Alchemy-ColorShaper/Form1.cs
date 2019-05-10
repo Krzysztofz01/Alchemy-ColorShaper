@@ -24,10 +24,27 @@ namespace Alchemy_ColorShaper
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            checkBox1.Checked = false;
+
             trackBarValue1.Text = trackBar1.Value.ToString();
             trackBarValue2.Text = trackBar3.Value.ToString();
             trackBarValue3.Text = trackBar2.Value.ToString();
             trackBarValue4.Text = trackBar4.Value.ToString();
+
+            trackBar1.Visible = false;
+            trackBar2.Visible = false;
+            trackBar3.Visible = false;
+            trackBar4.Visible = false;
+
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label5.Visible = false;
+
+            trackBarValue1.Visible = false;
+            trackBarValue2.Visible = false;
+            trackBarValue3.Visible = false;
+            trackBarValue4.Visible = false;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -67,10 +84,22 @@ namespace Alchemy_ColorShaper
         {
             if (Data.imageLocation != "")
             {
-                Data.threshold = trackBar1.Value;
-                Data.resolution = trackBar3.Value;
-                Data.compression = trackBar2.Value;
-                Data.accuracy = trackBar4.Value;
+
+                if(checkBox1.Checked)
+                {
+                    Data.threshold = trackBar1.Value;
+                    Data.resolution = trackBar3.Value;
+                    Data.compression = trackBar2.Value;
+                    Data.accuracy = trackBar4.Value;
+                }
+                else
+                {
+                    Data.threshold = 50;
+                    Data.resolution = 600;
+                    Data.compression = 50;
+                    Data.accuracy = 4;
+                }
+                
 
                 // Rozpoczecie procesu
                 List<string> outputColors = new List<string>();
@@ -108,6 +137,44 @@ namespace Alchemy_ColorShaper
         private void TrackBar4_Scroll(object sender, EventArgs e)
         {
             trackBarValue4.Text = trackBar4.Value.ToString();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                trackBar1.Visible = true;
+                trackBar2.Visible = true;
+                trackBar3.Visible = true;
+                trackBar4.Visible = true;
+
+                label1.Visible = true;
+                label2.Visible = true;
+                label3.Visible = true;
+                label5.Visible = true;
+
+                trackBarValue1.Visible = true;
+                trackBarValue2.Visible = true;
+                trackBarValue3.Visible = true;
+                trackBarValue4.Visible = true;
+            }
+            else
+            {
+                trackBar1.Visible = false;
+                trackBar2.Visible = false;
+                trackBar3.Visible = false;
+                trackBar4.Visible = false;
+
+                label1.Visible = false;
+                label2.Visible = false;
+                label3.Visible = false;
+                label5.Visible = false;
+
+                trackBarValue1.Visible = false;
+                trackBarValue2.Visible = false;
+                trackBarValue3.Visible = false;
+                trackBarValue4.Visible = false;
+            }
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
