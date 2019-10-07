@@ -8,3 +8,4 @@ D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper2\Alchemy-ColorShaper2\obj
 D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper2\Alchemy-ColorShaper2\obj\Debug\Alchemy-ColorShaper2.exe
 D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper2\Alchemy-ColorShaper2\obj\Debug\Alchemy-ColorShaper2.pdb
 D:\Projekty\C#\Alchemy-ColorShaper\Alchemy-ColorShaper2\Alchemy-ColorShaper2\obj\Debug\Alchemy_ColorShaper2.mainWindow.resources
+D:\projekty\c#\alchemy-colorshaper\Alchemy-ColorShaper2\Alchemy-ColorShaper2\obj\Debug\Alchemy_ColorShaper2.outputWindow.resources

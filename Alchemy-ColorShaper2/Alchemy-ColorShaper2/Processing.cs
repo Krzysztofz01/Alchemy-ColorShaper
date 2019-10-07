@@ -11,7 +11,7 @@ namespace Alchemy_ColorShaper2
     {
         //Alchemy class contains default analyzing algorithm
 
-        public static void legacy(Bitmap map, List<string> outputTab, int threshold, int resolution, int compression, int accuracy)
+        public static void legacy(Bitmap rawMap, List<string> outputTab, int threshold, int resolution, int compression, int accuracy)
         {
             List<Tint> inputTab = new List<Tint>();
             bool control;
@@ -19,6 +19,10 @@ namespace Alchemy_ColorShaper2
             // true = this color is already on the list
 
             //Checking all pixels in a loop row by row
+
+            Bitmap map = new Bitmap(rawMap, resolution, resolution);
+            map = Pixelate.convert(map, new Rectangle(0, 0, map.Width, map.Height), compression);
+
             for (int y = 0; y < map.Height; y += accuracy)
             {
                 for (int x = 0; x < map.Width; x += accuracy)
@@ -65,8 +69,11 @@ namespace Alchemy_ColorShaper2
 
                 for (int y = 0; y < outputTab.Count; y++)
                 {
+                    //w tym miejscu inputTabIndex wychodzi na minus
                     if (filter.different(hextoColor(outputTab[y]), hextoColor(inputTab[inputTabIndex].getColor())))
+                    {
                         isGood = false;
+                    }
                 }
 
                 if (isGood)

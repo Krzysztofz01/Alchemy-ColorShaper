@@ -53,6 +53,13 @@
     <Compile Include="mainWindow.Designer.cs">
       <DependentUpon>mainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Output.cs" />
+    <Compile Include="outputWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outputWindow.Designer.cs">
+      <DependentUpon>outputWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pixelate.cs" />
     <Compile Include="Processing.cs" />
     <Compile Include="Program.cs" />
@@ -61,6 +68,9 @@
     <Compile Include="Tint.cs" />
     <EmbeddedResource Include="mainWindow.resx">
       <DependentUpon>mainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="outputWindow.resx">
+      <DependentUpon>outputWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

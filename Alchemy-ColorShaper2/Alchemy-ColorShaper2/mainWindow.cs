@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Alchemy_ColorShaper2
@@ -31,6 +32,18 @@ namespace Alchemy_ColorShaper2
         private void BtnStartProcessing_Click(object sender, EventArgs e)
         {
             //async
+             Processing.legacy(
+                new Bitmap(selectedImageLocation),
+                Output.outputColors,
+                tbThreshold.Value,
+                tbResolution.Value,
+                tbCompression.Value,
+                tbAccuracy.Value);
+
+            this.Hide();
+            var ow = new outputWindow(selectedImageLocation);
+            ow.ShowDialog();
+            this.Close();
         }
 
         private void TbThreshold_Scroll(object sender, EventArgs e)
