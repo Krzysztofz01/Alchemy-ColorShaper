@@ -1,5 +1,10 @@
-# Alchemy-ColorShaper
+#  Alchemy-ColorShaper  
+## Deprecated
+The Alchemy-ColorShaper project is no longer supported. On the basis of this program a library has been created which contains many more improved functionalities. Link to repository: [Alchemy-Engine](https://github.com/Krzysztofz01/Alchemy-Engine)
+
+### Description
 Create color palettes based on images! You can edit the parameters to get the most satisfying effect!
+
 When you generate a palette, you can change four parameters:
 - Threshold - threshold of filter operation, whose task is to remove colors that are too similar to each other,
 - Resolution - resolution to which the image should be scaled for faster analysis,
