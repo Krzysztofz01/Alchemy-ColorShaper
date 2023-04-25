@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlchemyColorShaper.Core", "AlchemyColorShaper.Core\AlchemyColorShaper.Core.csproj", "{0657417D-98F4-4B5C-BA44-DCE2A0DC0F65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlchemyColorShaper.Core.Test", "AlchemyColorShaper.Core.Test\AlchemyColorShaper.Core.Test.csproj", "{57EC661A-35DA-43ED-AE80-4C745CA15FF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlchemyColorShaper.Cli", "AlchemyColorShaper.Cli\AlchemyColorShaper.Cli.csproj", "{72B54DA5-F6EA-409C-A881-3F78A3AE73B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0657417D-98F4-4B5C-BA44-DCE2A0DC0F65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0657417D-98F4-4B5C-BA44-DCE2A0DC0F65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0657417D-98F4-4B5C-BA44-DCE2A0DC0F65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0657417D-98F4-4B5C-BA44-DCE2A0DC0F65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57EC661A-35DA-43ED-AE80-4C745CA15FF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57EC661A-35DA-43ED-AE80-4C745CA15FF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57EC661A-35DA-43ED-AE80-4C745CA15FF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57EC661A-35DA-43ED-AE80-4C745CA15FF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72B54DA5-F6EA-409C-A881-3F78A3AE73B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72B54DA5-F6EA-409C-A881-3F78A3AE73B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72B54DA5-F6EA-409C-A881-3F78A3AE73B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72B54DA5-F6EA-409C-A881-3F78A3AE73B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44F7ECC1-D715-492F-87A5-E88DDA12D7F5}
+	EndGlobalSection
+EndGlobal
