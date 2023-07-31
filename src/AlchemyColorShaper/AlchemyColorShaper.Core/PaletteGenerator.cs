@@ -1,5 +1,4 @@
-﻿using AlchemyColorShaper.Core.Extensions;
-using SkiaSharp;
+﻿using AlchemyColorShaper.Core.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,44 +9,44 @@ namespace AlchemyColorShaper.Core;
 
 public sealed class PaletteGenerator
 {
-    public static Palette GeneratePalette(SKBitmap bitmap, PaletteGeneratorOptions? options = null)
+    public static Palette GeneratePalette(IImage image, PaletteGeneratorOptions? options = null)
     {
         if (options is null) options = GetDefaultPaletteGeneratorOptions();
 
-        var scaledBitmap = ScaleBitmap(bitmap, options.ScaleFactor);
+        var scaledImage = image.Scale(options.ScaleFactor);
 
         return options.Algorithm switch
         {
-            PaletteGeneratorAlgorithm.CountingMethod => GeneratePaletteUsingCountingMethod(scaledBitmap, options),
-            PaletteGeneratorAlgorithm.TensorMethod => GeneratePaletteUsingTensorMethod(scaledBitmap, options),
+            PaletteGeneratorAlgorithm.CountingMethod => GeneratePaletteUsingCountingMethod(scaledImage, options),
+            PaletteGeneratorAlgorithm.TensorMethod => GeneratePaletteUsingTensorMethod(scaledImage, options),
             _ => throw new InvalidOperationException("Unknown PaletteGeneratorAlgorithm specified."),
         };
     }
 
-    public static Task<Palette> GeneratePaletteAsync(SKBitmap bitmap, PaletteGeneratorOptions? options = null, CancellationToken cancellationToken = default)
+    public static Task<Palette> GeneratePaletteAsync(IImage image, PaletteGeneratorOptions? options = null, CancellationToken cancellationToken = default)
     {
-        return Task.Run(() => GeneratePalette(bitmap, options), cancellationToken);
+        return Task.Run(() => GeneratePalette(image, options), cancellationToken);
     }
 
-    private static Palette GeneratePaletteUsingTensorMethod(SKBitmap bitmap, PaletteGeneratorOptions options)
+    private static Palette GeneratePaletteUsingTensorMethod(IImage image, PaletteGeneratorOptions options)
     {
-        var colorTensor = new Tensor<List<SKColor>>(3, () => new List<SKColor>());
+        var colorTensor = new Tensor<List<IColor>>(3, () => new List<IColor>());
 
-        foreach (int x in Enumerable.Range(0, bitmap.Width))
+        foreach (int x in Enumerable.Range(0, image.Width))
         {
-            foreach (int y in Enumerable.Range(0, bitmap.Height))
+            foreach (int y in Enumerable.Range(0, image.Height))
             {
-                var color = bitmap.GetPixel(x, y);
+                var color = image.GetPixel(x, y);
 
-                int rIndex = (color.Red > 170) ? 2 : (color.Red < 85) ? 0 : 1;
-                int gIndex = (color.Green > 170) ? 2 : (color.Green < 85) ? 0 : 1;
-                int bIndex = (color.Blue > 170) ? 2 : (color.Blue < 85) ? 0 : 1;
+                int rIndex = (color.R > 170) ? 2 : (color.R < 85) ? 0 : 1;
+                int gIndex = (color.G > 170) ? 2 : (color.G < 85) ? 0 : 1;
+                int bIndex = (color.B > 170) ? 2 : (color.B < 85) ? 0 : 1;
 
                 colorTensor.GetValue(rIndex, gIndex, bIndex).Add(color);
             }
         }
 
-        var paletteColors = new List<SKColor>();
+        var paletteColors = new List<IColor>();
         foreach (int x in Enumerable.Range(0, 3))
         {
             foreach (int y in Enumerable.Range(0, 3))
@@ -63,15 +62,15 @@ public sealed class PaletteGenerator
 
                     foreach (var color in colors)
                     {
-                        rSum += color.Red;
-                        gSum += color.Green;
-                        bSum += color.Blue;
+                        rSum += color.R;
+                        gSum += color.G;
+                        bSum += color.B;
                     }
 
-                    paletteColors.Add(new SKColor(
-                        Convert.ToByte(rSum / colors.Count),
-                        Convert.ToByte(gSum / colors.Count),
-                        Convert.ToByte(bSum / colors.Count)));
+                    paletteColors.Add(IColor.CreateColor(
+                        Convert.ToInt32(rSum / colors.Count),
+                        Convert.ToInt32(gSum / colors.Count),
+                        Convert.ToInt32(bSum / colors.Count)));
                 }
             }
         }
@@ -81,15 +80,15 @@ public sealed class PaletteGenerator
            : Palette.CreateEmpty();
     }
 
-    private static Palette GeneratePaletteUsingCountingMethod(SKBitmap bitmap, PaletteGeneratorOptions options)
+    private static Palette GeneratePaletteUsingCountingMethod(IImage image, PaletteGeneratorOptions options)
     {
-        var colors = new Dictionary<SKColor, int>();
+        var colors = new Dictionary<IColor, int>();
 
-        foreach (int x in Enumerable.Range(0, bitmap.Width))
+        foreach (int x in Enumerable.Range(0, image.Width))
         {
-            foreach (int y in Enumerable.Range(0, bitmap.Height))
+            foreach (int y in Enumerable.Range(0, image.Height))
             {
-                var color = bitmap.GetPixel(x, y);
+                var color = image.GetPixel(x, y);
 
                 if (colors.ContainsKey(color))
                 {
@@ -102,9 +101,9 @@ public sealed class PaletteGenerator
             }
         }
 
-        var colorQueue = new Queue<SKColor>(colors.OrderByDescending(c => c.Value).Select(p => p.Key));
+        var colorQueue = new Queue<IColor>(colors.OrderByDescending(c => c.Value).Select(p => p.Key));
 
-        var paletteColors = new Stack<SKColor>();
+        var paletteColors = new Stack<IColor>();
         while (paletteColors.Count < options.MaxEntries)
         {
             if (colorQueue.Count == 0) break;
@@ -116,8 +115,8 @@ public sealed class PaletteGenerator
                 continue;
             }
 
-            int distanceToPrevious = paletteColors.Peek().GetColorDistance(color);
-            if (distanceToPrevious > options.ColorThreshold)
+            var distanceToPrevious = paletteColors.Peek().GetDistance(color);
+            if (distanceToPrevious * 255.0 > options.ColorThreshold)
             {
                 paletteColors.Push(color);
                 continue;
@@ -141,19 +140,6 @@ public sealed class PaletteGenerator
             ColorThreshold = 50,
             MaxEntries = 1
         };
-    }
-
-    private static SKBitmap ScaleBitmap(SKBitmap bitmap, double scaleFactor)
-    {
-        var width = Convert.ToInt32(bitmap.Width * scaleFactor);
-        var height = Convert.ToInt32(bitmap.Height * scaleFactor);
-
-        var scaledBitmap = new SKBitmap(width, height);
-
-        if (!bitmap.ScalePixels(scaledBitmap, SKFilterQuality.High))
-            throw new InvalidOperationException("Failed to scaled the image to the given scale factor.");
-
-        return scaledBitmap;
     }
 }
 

@@ -1,5 +1,5 @@
-﻿using AlchemyColorShaper.Core.Extensions;
-using SkiaSharp;
+﻿using AlchemyColorShaper.Core.Abstraction;
+using AlchemyColorShaper.Core.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +8,10 @@ namespace AlchemyColorShaper.Core;
 
 public sealed class Palette
 {
-    private readonly List<SKColor> _colors = new();
-    public IReadOnlyCollection<SKColor> Colors => _colors.AsReadOnly();
+    private readonly List<IColor> _colors = new();
+    public IReadOnlyCollection<IColor> Colors => _colors.AsReadOnly();
 
-    public SKBitmap GeneratePaletteImage(int height, bool inverted)
+    public IImage GeneratePaletteImage(int height, bool inverted)
     {
         if (height <= 0) throw new ArgumentOutOfRangeException(nameof(height), "Height values must be greater than zero.");
 
@@ -20,7 +20,7 @@ public sealed class Palette
             : Colors;
 
         int width = height / paletteColors.Count;
-        var image = new SKBitmap(width, height);
+        var image = IImage.CreateImage(width, height);
 
         foreach (int y in Enumerable.Range(0, height))
         {
@@ -37,11 +37,11 @@ public sealed class Palette
     }
 
     private Palette() { }
-    private Palette(IEnumerable<SKColor> colors) => _colors = colors.ToList();
+    private Palette(IEnumerable<IColor> colors) => _colors = colors.ToList();
 
     public static Palette CreateEmpty() =>
-        new(Enumerable.Empty<SKColor>());
+        new(Enumerable.Empty<IColor>());
 
-    public static Palette CreateFromEnumerable(IEnumerable<SKColor> colors) =>
+    public static Palette CreateFromEnumerable(IEnumerable<IColor> colors) =>
         new(colors.OrderByDescending(c => c.GetPerceivedBrightness()));
 }
